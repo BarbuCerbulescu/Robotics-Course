@@ -1,1 +1,1 @@
-
+Uploaded the code for first homework in the file "RGB_led.ino"(initially uploaded in the main folder rather than the homework one).The code allows you to use the values recieved from three potentiometers in order to regulate the ammount of red,green and blue light in an RGB led.
