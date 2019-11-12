@@ -1,4 +1,4 @@
-const int detectorPin=A0;
+const int detectorPin=A1;
 const int buzzerPin=11;
 const int buttonPin=2;
 const int threshold=1;
