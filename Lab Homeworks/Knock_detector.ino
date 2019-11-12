@@ -20,12 +20,13 @@ void loop() {
   detectorValue=analogRead(detectorPin);
    Serial.println(detectorValue);
    buttonState=digitalRead(buttonPin);
+  //due to using the Arduino PULLUP resistance the values for the button are switched:1 when the button is not pressed,0 when the button is pressed
    if(buttonState==0 && prevButtonState==1 && millis() - LastButtonPress>100)
    {
      ShutUpSignal=1;
      LastButtonPress=millis();
    }
-   if(detectorValue>threshold && millis - LastKnock>=3000)
+   if(detectorValue>threshold && millis - LastKnock>=1000)
    {
       Serial.println("Knock");
       ShutUpSignal=0;
