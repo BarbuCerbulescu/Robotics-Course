@@ -7,6 +7,9 @@ int detectorValue=0;
 int buttonState=0;
 int prevButtonState=0;
 int ShutUpSignal=1;
+int FirstKnock=0;
+//FirstKnock stores the time of the first knock after the button was pressed
+//or the first actual knock initially
 int LastKnock=0;
 int LastButtonPress=0;
 
@@ -28,12 +31,13 @@ void loop() {
    }
    if(detectorValue>threshold && millis - LastKnock>=1000)
    {
-      Serial.println("Knock");
-      ShutUpSignal=0;
       LastKnock=millis();
+      Serial.println("Knock");
+      if(ShutUpSignal==1)FirstKnock=LastKnock;
+      ShutUpSignal=0;
    }
    Serial.println();
-   if(ShutUpSignal==0 && millis() - LastKnock>=5000)
+   if(ShutUpSignal==0 && millis() - FirstKnock>=5000)
    {
      tone(buzzerPin,500,300);
      tone(buzzerPin,150,300);
