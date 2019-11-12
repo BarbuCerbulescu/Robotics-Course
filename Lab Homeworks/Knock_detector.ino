@@ -8,7 +8,7 @@ int buttonState=0;
 int prevButtonState=0;
 int ShutUpSignal=1;
 int FirstKnock=0;
-//FirstKnock stores the time of the first knock after the button was pressed
+//FirstKnock stores the time of the first knock aftereach time the button was pressed
 //or the first actual knock initially
 int LastKnock=0;
 int LastButtonPress=0;
