@@ -23,7 +23,7 @@ int score=0;
 int lives=3;
 int HighScore=0;
 
-int LevelBegins=0;
+unsigned long LevelBegins=0;
 int LastYChange=0;
 bool joyMoved=false;
 int swState=1;
