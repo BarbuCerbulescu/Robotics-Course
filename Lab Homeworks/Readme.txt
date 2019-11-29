@@ -7,5 +7,4 @@ Uploaded the code for the third homework in the file"4dig7segJoystickControl.ino
 Note:I couldn't get the decimal point to light up for the display currently chosen.You will be able to distinguish it from the others by the fact that if the current displays is unlocked the digit on it flickers and if it is locked then the value on it will modify by moving the switch vertically.
 
 Uploade the code for the fourth homework in the file "lcd_game_menu.ino".The program simulates a video game menu that can be navigated through using the joystick and displays on an lcd screen.
-Video1:https://drive.google.com/open?id=14Qkk76kxwf8wSBT_6R4qSO9kQ99enPlw(more blurry but you can see the starting level being changed)
-Video2:https://drive.google.com/open?id=14bGwAWXb_mWV1HGyFRJFz0PPZL_QB83X
+Video:https://drive.google.com/open?id=14zzDeSiceA_Wu3aONvov7f7VC4gs666a
