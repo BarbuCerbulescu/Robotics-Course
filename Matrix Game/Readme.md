@@ -9,6 +9,7 @@ So, what do you think young adventurer?Do you belive you can succeed when so man
 
 
 **How it plays:**
+
 As sugested by the title,the game revolves around dodging the attacks the antagonist will throw at you.You will do so by moving vertically,horizontally or diagonally.Movement is acomplished using the joystick.
 
 The game's objective is to survive all 4 levels and get as high a score as possible.The maximum score is 2046.
@@ -28,6 +29,7 @@ The feature above is set by default but it can be disabled in the settings menu(
 In the settings menu you can also choose what level to start on. Do note however that you will get less points for not completing the previous levels and if the starting level is 4 you will not get your score double if you disabled bonus lives(would be cheating).
 
 **How the score is calculated:**
+
 Each time a level is completed  (4^level)*nr_of_lives _left is added to the score.The ammount added is doubled if bonus lives are disabled(unless in the case above).
 
 **Types of attacks:**
