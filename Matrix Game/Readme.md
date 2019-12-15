@@ -1,4 +1,3 @@
-<pre>
 
 
 
@@ -52,10 +51,9 @@ Other than that (and obviously their trajectory) they function the same way.They
 Both will 'spawn' based on the column or line you are curently standing on.
 
 
-***Spikes:***
-                                                                       A   A   A
-                                            A   A   A              !     !    !
-                       A A A            !    !     !               !     !    !  
+***Spikes:*** <pre>
+                                                                          A     A     A                                                                                               A     A     A               !     !     !
+                       A    A    A            !     !     !               !     !     !                                     <pre/>
 
 Spikes will slowly rise from and return to the ground as shown above.Their main aim is to discourage the player from staying on the bottom lines to better avoid the vertical arrows.
 
@@ -63,4 +61,4 @@ They will only spawn if the player enters the 4 bottom lines.
 
 They are first introduced 10 seconds into the first level.
 
-<pre/>
+
