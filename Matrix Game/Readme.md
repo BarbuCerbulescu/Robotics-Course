@@ -1,4 +1,4 @@
-﻿
+<pre>
 
 
 
@@ -63,4 +63,4 @@ They will only spawn if the player enters the 4 bottom lines.
 
 They are first introduced 10 seconds into the first level.
 
-
+<pre/>
