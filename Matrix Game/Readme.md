@@ -35,8 +35,8 @@ Each time a level is completed  (4^level)*nr_of_lives _left is added to the scor
 **Types of attacks:**
 
   ***Arrows***:  
-                                       !
-                                       v                 -  ->
+  <pre>                     !                       </pre>
+  <pre>                     v                 -- >   </pre>
  
 They can be refered to as the game's basic attack.They move along a straight path,be it a line or a column.
 
