@@ -55,10 +55,10 @@ Both will 'spawn' based on the column or line you are curently standing on.
  <pre>                                                                         A     A     A      </pre>                                  <pre>                                             A     A     A               !     !     !      </pre>
  <pre>                      A    A    A            !     !     !               !     !     !      </pre>                                
 
-Spikes will slowly rise from and return to the ground as shown above.Their main aim is to discourage the player from staying on the bottom lines to better avoid the vertical arrows.
+Spikes will slowly rise from and return to the ground as shown above.Their main aim is to discourage the player from staying on the bottom lines to better avoid the vertical arrows.However they still allow the player to use those rows if careful.
 
 They will only spawn if the player enters the 4 bottom lines.
 
-They are first introduced 10 seconds into the first level.
+They are introduced from the very beggining.
 
 
