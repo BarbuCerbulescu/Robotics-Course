@@ -105,4 +105,5 @@ It only appears in level 3.
 
 **Links:**
 Picture of my setup:
+
 Gameplay footage:
