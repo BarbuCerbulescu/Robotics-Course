@@ -108,6 +108,6 @@ It only appears in level 3.
 -Joystick;
 
 **Links:**
-Picture of my setup:
+Picture of my setup:https://drive.google.com/open?id=17s9KXKDmqmTzrO7sTPmRUsX12_TZ6ArA
 
-Gameplay footage:
+Gameplay footage:https://drive.google.com/open?id=1yXgb9jxDZlbBoxY-NpfgvVbKMIIv517R
