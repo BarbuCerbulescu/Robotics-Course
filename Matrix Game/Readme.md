@@ -23,6 +23,8 @@ Your character is represented by a blinking red dot on the screen,in contrast to
 
 If your avatar gets hit by one of the attacks,you will lose a life.Lose all 3 and you lose the game.
 
+After being hit,you will be invulnerable for 1 second.You will also be invulnerable for the first second upon entering the game.
+
 You can replenish your lives by completing a level without losing any of the ones remaining.One of your lives will be replenished by doing so.
 
 The feature above is set by default but it can be disabled in the settings menu(also displayed on the lcd) in exchange for double the score.
