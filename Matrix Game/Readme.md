@@ -44,8 +44,8 @@ There are 2 types of arrows: vertical and lateral.
 
 The vertical one always comes from the top of the screen whereas the lateral one will come from the side closest to you.
 
-The vertical one is introduced from the very beggining while the lateral one starts appearing from level 2 onwards.
-
+The vertical one is introduced from the very beggining while the lateral one starts appearing from level 2 onwards. The vertical arrow is not present in the last level.
+ 
 Other than that (and obviously their trajectory) they function the same way.They have the same speed and the same shape(line made of two points).
 
 Both will 'spawn' based on the column or line you are curently standing on.
@@ -62,3 +62,45 @@ They will only spawn if the player enters the 4 bottom lines.
 They are introduced from the very beggining.
 
 
+***Fireball Cluster:***
+<pre>                 o         o                    o                     o       </pre>
+<pre>                      o                                    o                  </pre>      
+
+Also refered to as the Wave in the code(doue to its inital shape),the Cluster will split in 3 when the player moves out of its path.
+
+The Cluster appears in the 4th level,replacing the top arrow.
+
+When split,the ball from the center will go straight down while the others will go down diagonally,one to the left and one to the right.
+
+The best way to deal with Clusters is to keep moving.The earlier they split,the less dangerous they should become.
+
+
+***Meteor:***
+<pre>                                                            #              </pre>
+<pre>                        #                           #              #            </pre>
+<pre>     #           #             #             #                            #          </pre>
+<pre>                        #                           #              #            </pre>
+<pre>                                                            #              </pre>
+
+The Meteor acts as a shockwave-type ability,starting from a single point and spreading outwards as shown above.
+
+The Meteor appears direactly near the player(but only diagonally in regards to the avatar)once every 5 seconds if he is in the middle(between rows and columns 3 and 6).
+
+When a Meteor is about to appear and while it is active the Arrow attacks won't spawn.This is a good indicator of when it will strike.
+
+It only appears in level 3.
+
+
+**Require Hardware:**
+
+-Arduino Uno;
+
+-8x8 LED matrix;
+
+-MAX7219 Driver;
+
+-2x16 LCD screen;
+
+-Joystick;
+
+Picture of my setup:
