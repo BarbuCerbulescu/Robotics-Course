@@ -33,7 +33,8 @@ In the settings menu you can also choose what level to start on. Do note however
 
 **How the score is calculated:**
 Each time a level is completed  (4^level)*nr_of_lives _left is added to the score.The ammount added is doubled if bonus lives are disabled(unless in the case above).
-Note:if you have BonusLives on your life will be restored before the score is calculated
+
+Note:if you have Bonus Lives on,your life will be restored before the score is calculated
 
 **Types of attacks:**
 
