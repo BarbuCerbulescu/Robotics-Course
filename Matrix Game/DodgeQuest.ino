@@ -200,9 +200,10 @@ void ChangeSubMenu(){
                   if(SelectedOption==0){
                     //enter the in-game submenu
                     level=StartingLevel-1;
+                    //level will become StartingLevel 
                     prevLives=3;
                     lives=3;
-                    score=-(int(pow(4,level))+1)*lives*bonusLivesModifier;
+                    score=-(int(pow(4,level))+1)*lives*bonusLivesModifier;//it will become 0 when level becomes Starting level
                     GameOver=0;
                     LastLifeLost=millis();
                     for(int i=0;i<10;i++){
@@ -232,13 +233,14 @@ void ChangeSubMenu(){
                   //selected option and go back to
                   //settings menu
                   StartingLevel=SelectedOption+1;
+                  if(StartingLevel==4)BonusLivesModifier=1;
                   CurrentSubMenu=3;
                 }
                 else if(CurrentSubMenu==5){
                   //the bonus lives submenu
                   if(SelectedOption==1 && StartingLevel<4)bonusLivesModifier=2;
-                  //if "No" is selected and Starting Level<4 get double points
-                  else bonusLivesModifier=1;
+                  //if "No" is selected lose Bonus Lives and get double points
+                  else bonusLivesModifier=1;//if "Yes" is selected enable Bonus Lives
                   CurrentSubMenu=3;
                 }
                 else CurrentSubMenu=0;
@@ -315,7 +317,7 @@ void handleAttacks(){
       if(millis()-LastMeteorChange<5000 || level!=3 ||(pc<2 || pc>=6|| pl<2 || pc>=6)){
           if(colLatArrow==9) attackMatrix[(colLatArrow-1)+1][(rowLatArrow)+1]=0;
           else  attackMatrix[(colLatArrow+1)+1][rowLatArrow+1]=0;
-          if(8-pc<pc){
+          if(7-pc<pc){
             colLatArrow=8;
             StateLatArrow=0;
             }
@@ -521,13 +523,15 @@ void loop() {
      if(millis()-LevelBegins>=LevelTime[level] || level==StartingLevel-1)
     {
       //increases level once the time duration for it has passed
-      //to prevent issues level will start at StartingLevel-1 and increases immediately to StartingLevel
       if(level==3){
+        //in the 3rd level the meteor and the arrows will wait for each other to finish so as not to fill the screen with too many attacks
+        //once the 3rd level is finished and the meteor no longer appears,arrows are allowed to spawn again if the the meteor 
+        //was intrerrupted by the level becoming 4
         stopTopArrow=0;
         stopLatArrow=0;
       }
       if(lives==prevLives && lives<3 && bonusLivesModifier==1)lives++;//if you have bonus lives enabled restore a life if you haven't lost any this lvl
-      score=score+(int(pow(4,level))+1)*lives*bonusLivesModifier;
+      score=score+(int(pow(4,level))+1)*lives*bonusLivesModifier;//the amount added is actually (4^level)*lives*bonusLivesModifier due to conversion issues
       prevLives=lives;
       level++;
       countdown=1000;//resets the countdown to a big number so that it immediately changes to the corect one
@@ -648,8 +652,7 @@ void loop() {
     ChangeSubMenu();
     }
   if(CurrentSubMenu==6){
-    //the "you have won.press the button to go
-    //back to the main menu" submenu
+    //the game over submenu
     lc.clearDisplay(0);
     lcd.setCursor(0,0);
     lcd.print("Press the button");
@@ -658,6 +661,7 @@ void loop() {
     ChangeSubMenu();
   }
   if(CurrentSubMenu==7){
+    //the info submenu
     lcd.setCursor(0,0);
     lcd.print(InfoMenuRow1Option[SelectedOption]);
     lcd.setCursor(0,1);
